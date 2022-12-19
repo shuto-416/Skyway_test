@@ -60,6 +60,7 @@ function App() {
       const blob = new Blob([file])
       const link = URL.createObjectURL(blob)
       dataConnection.send({ link, name: file.name, })
+      // URL.revokeObjectURL(link)
     }
   }
 
